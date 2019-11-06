@@ -1,0 +1,37 @@
+<p>New Mock</p>
+
+<form #mockForm="ngForm" (ngSubmit)="submitMock(mockForm.form)">
+<div class="row">
+      <div="col-md-2"></div>
+      <div="col-md-4"> </div>
+      <div="col-md-6"><input type="hidden" class="form-control" [(ngModel)]=mock.id></div>
+</div>
+<div class="row">
+    <div="col-md-2"></div>
+    <div="col-md-4">Name: </div>
+    <div="col-md-6"><input type="text" class="form-control" [(ngModel)]=mock.name></div>
+</div>
+<div class="row">
+    <div="col-md-2"></div>
+    <div="col-md-4">responseBody: </div>
+    <div="col-md-6"><input type="text" class="form-control" [(ngModel)]=mock.responseBody></div>
+</div>
+<div class="row">
+    <div="col-md-2"></div>
+    <div="col-md-4">uriParameter: </div>
+    <div="col-md-6"><input type="text" class="form-control" [(ngModel)]=mock.uriParameter></div>
+</div>
+<div class="row">
+    <div="col-md-2"></div>
+    <div="col-md-4">headerParameter: </div>
+    <div="col-md-6"><input type="text" class="form-control" [(ngModel)]=mock.headerParameter></div>
+</div>
+<div class="row">
+    <div="col-md-2"></div>
+    <div="col-md-4">requestBody: </div>
+    <div="col-md-6"><input type="text" class="form-control" [(ngModel)]=mock.requestBody></div>
+</div>
+
+<button type="submit" class="btn btn-primary" (ngSubmit)="submitMock()">Save</button>
+<button type="button" class="btn btn-primary" (click)="cancel()"></button>
+</form>
