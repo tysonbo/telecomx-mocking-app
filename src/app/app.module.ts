@@ -7,15 +7,18 @@ import { PoliciesComponent } from './policies/policies.component';
 import { CustomersComponent } from './customers/customers.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
-import { MocksComponent } from './mocks/mocks.component'; // Added here
-
+import { MocksComponent } from './mocks/mocks.component';
+import { CreateMockComponent } from './create-mock/create-mock.component'; // Added here
+import { NgForms } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     PoliciesComponent,
     CustomersComponent,
     HomeComponent,
-    MocksComponent
+    MocksComponent,
+    CreateMockComponent,
+    NgForms
   ],
   imports: [
     BrowserModule,
