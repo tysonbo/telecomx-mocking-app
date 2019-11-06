@@ -7,7 +7,8 @@ import { PoliciesComponent } from './policies/policies.component';
 import { CustomersComponent } from './customers/customers.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
-import { MocksComponent } from './mocks/mocks.component'; // Added here
+import { MocksComponent } from './mocks/mocks.component';
+import { CreateCustomerComponent } from './create-customer/create-customer.component'; // Added here
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MocksComponent } from './mocks/mocks.component'; // Added here
     PoliciesComponent,
     CustomersComponent,
     HomeComponent,
-    MocksComponent
+    MocksComponent,
+    CreateCustomerComponent
   ],
   imports: [
     BrowserModule,
