@@ -1,2 +1,12 @@
-<p>customers works!</p>
-<p>No it does not</p>
+
+<div class="card-container">        
+            <div class="card" style="width: 18rem;" *ngFor="let c of customers">
+                <div class="card-content">
+                    <span class="card-title">{{c.name}}</span>
+                    <p>{{c.policy}}</p>
+                    <p>{{c.address}}</p>
+                    <p>{{c.city}}</p>
+                    <p>{{c.state}}</p>
+                </div>
+            </div>        
+</div>

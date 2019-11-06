@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Customer } from '../data/customer';  
+import { customerData } from '../data/customerData';
 
 @Component({
   selector: 'app-customers',
@@ -6,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customers.component.css']
 })
 export class CustomersComponent implements OnInit {
+  customers: Customer[];
+  
+  constructor() { 
+    this.customers = customerData;
+  }
 
-  constructor() { }
 
   ngOnInit() {
   }
