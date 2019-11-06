@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { PoliciesComponent } from './policies/policies.component';
 import { CustomersComponent } from './customers/customers.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './home/home.component'; // Added here
+import { HomeComponent } from './home/home.component';
+import { MocksComponent } from './mocks/mocks.component'; // Added here
 
 @NgModule({
   declarations: [
     AppComponent,
     PoliciesComponent,
     CustomersComponent,
-    HomeComponent
+    HomeComponent,
+    MocksComponent
   ],
   imports: [
     BrowserModule,
