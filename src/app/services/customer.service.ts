@@ -27,10 +27,11 @@ export class CustomerService {
   }
 
   addCustomer(customer: Customer) {
+    this.customers.push(customer);
     // return this.httpClient.post(`${this.apiURL}/customers/`,customer);
-    if (!this.customers.indexOf(customer)) {
-      this.customers.push(customer);
-    } 
+    // if (!this.customers.indexOf(customer)) {
+    //   this.customers.push(customer);
+    // } 
     
   }
 
