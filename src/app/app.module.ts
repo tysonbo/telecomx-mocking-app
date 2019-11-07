@@ -9,8 +9,10 @@ import { CustomersComponent } from './customers/customers.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { MocksComponent } from './mocks/mocks.component';
-import { CreateCustomerComponent } from './create-customer/create-customer.component'; // Added here
+import { CustomerFormComponent } from './customer-form/customer-form.component'; // Added here
 import { CreateMockComponent } from './create-mock/create-mock.component';
+import { CustomerService } from './services/customer.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,15 +21,16 @@ import { CreateMockComponent } from './create-mock/create-mock.component';
     CustomersComponent,
     HomeComponent,
     MocksComponent,
-    CreateCustomerComponent,
-    CreateMockComponent        
+    CustomerFormComponent,
+    CreateMockComponent,     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,       
   ],
-  providers: [],
+  providers: [CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -15,11 +15,11 @@ export class CreateMockComponent implements OnInit {
   ngOnInit() {
   }
 
-submitMock(mock){
+submitMock(mock) {
 
 }
 
-cancel(){
+cancel() {
   this.router.navigate(['/mocks']);
 }
 

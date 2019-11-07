@@ -18,5 +18,6 @@ export class Customer {
             this.state = state;
             this.zip = zip;
             this.phoneNumber = phoneNumber;
+            this.email = email;
         }
 }

@@ -1,0 +1,59 @@
+<div class="container" [hidden]="!submitted">
+      <h1>Create Customer</h1>
+      <form (ngSubmit)="onSubmit()" #createForm="ngForm">
+            <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" [(ngModel)]="model.name" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+                  <label for="policy">Policy</label>
+                  <input type="text" class="form-control" [(ngModel)]="model.policy" name="policy" id="policy" required>
+            </div>
+
+            <div class="form-group">
+                  <label for="dob">Date Of Birth</label>
+                  <input type="text" class="form-control" [(ngModel)]="model.dob" name="dob" id="dob">
+            </div>
+
+            <div class="form-group">
+                  <label for="address">Address</label>
+                  <input type="text" class="form-control" [(ngModel)]="model.address" name="address" id="address">
+
+                  <label for="city">City</label>
+                  <input type="text" class="form-control" [(ngModel)]="model.city" name="city" id="city">
+
+                  <label for="state">State</label>
+                  <input type="text" class="form-control" [(ngModel)]="model.state" name="state" id="state">
+
+                  <label for="zip">Zip</label>
+                  <input type="text" class="form-control" [(ngModel)]="model.zip" name="zip" id="zip">
+            </div>
+
+            <div class="form-group">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input type="text" class="form-control" [(ngModel)]="model.phoneNumber" id="phoneNumber">
+            </div>
+
+            <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="text" class="form-control" [(ngModel)]="model.email" id="email">
+            </div>
+
+            <button type="submit" class="btn btn-success">Submit</button>
+
+      </form>
+</div>
+
+<div [hidden]="!submitted">
+      <h2>You submitted the following:</h2>
+      <div class="row">
+        <div class="col-xs-3">Name</div>
+        <div class="col-xs-9">{{ model.name }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">Policy</div>
+        <div class="col-xs-9">{{ model.policy }}</div>
+      </div>
+      <br>
+      <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+</div>
