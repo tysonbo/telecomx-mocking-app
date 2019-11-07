@@ -3,36 +3,34 @@ import { customerData } from '../data/customerData';
 import { Customer } from '../data/customer';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { ApiCustomer } from '../data/ApiCustomer';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
   
-  private apiURL = 'http://www.server.com/api/';
+  private apiURL = 'https://codejellyapi20191106034616.azurewebsites.net/api/customers';
   private customers: Customer[];
-  private http: HttpClient;
+  private httpClient: HttpClient;
 
   constructor(http: HttpClient) { 
     this.customers = customerData;
-    this.http = http;
+    this.httpClient = http;
   }
+  
 
-  getCustomers(): Customer[] {
-    return this.customers;
+  getCustomers(): Observable<Customer[]> {    
+    return this.httpClient.get<Customer[]>(`${this.apiURL}`);
   }
-  getCustomer(policy): Customer {
-    // return this.httpClient.get<Customer[]>(`${this.apiURL}/customers`);
+  getCustomer(policy): Customer {    
     return this.customers.find(c => c.policy === policy);
   }
 
   addCustomer(customer: Customer) {
-    this.customers.push(customer);
-    // return this.httpClient.post(`${this.apiURL}/customers/`,customer);
-    // if (!this.customers.indexOf(customer)) {
-    //   this.customers.push(customer);
-    // } 
-    
+    let c : ApiCustomer = new ApiCustomer(customer);
+    return this.httpClient.post(`${this.apiURL}`, ApiCustomer);
   }
 
   updateCustomer(customer: Customer) {
