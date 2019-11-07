@@ -286,45 +286,38 @@
     }
   </style> -->
 <!-- Resources -->
-  <h2>Telecom eXperiance Mocking Application</h2>
-  <p>Select an entry or add a mock endpoint below</p>
+<h2>Telecom eXperiance Mocking Application</h2>
+<p>Select an entry or add a mock endpoint below</p>
 
-  <div class="card-container">
-      <a routerLink="/customers" class="card" style="width: 18rem;">
-        <div class="row">
-          
-          <div class="col-sm-3 logo-box">
-              <i class="material-icons md-36">account_box</i>                      
-          </div>  
-          <div class="col-sm-6">
+<div class="card-container">
+  <a routerLink="/customers" class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem;">
+      <div class="card-title">
+        <i class="card-img-top material-icons md-36">account_box</i>Customers
+      </div>
+    </div>
+    <div class="card-body">
+      <a routerLink="/customers/create" class="btn btn-primary">Add Customer</a>
+    </div>
+  </a>
 
-             <h4>Customers</h4>
-          </div>
-          <div class="col-sm-3">
-            <a routerLink="/customers/create"><i class="material-icons md-48">add_circle</i></a>        
-          </div>
-        </div>
-                          
-      </a>
+  <a routerLink="/mocks" class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem;">
+      <div class="card-title">
+        <svg _ngcontent-lql-c1="" class="material-icons" height="24" viewBox="0 0 24 24" width="24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path _ngcontent-lql-c1=""
+            d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z">
+          </path>
+        </svg>
+        Mocks
+      </div>
+    </div>
+    <div class="card-body">
+      <a routerLink="/mocks/create" class="btn btn-primary">New Mocks</a>
+    </div>
+  </a>
 
-    <a routerLink="/policies" class="card" >
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
 
-      <span>Policies</span>
-
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    </a>
-      
-
-
-    <a routerLink="/mocks" class="card" >
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/></svg>
-
-      <span>New Mocks</span>
-
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-    </a>
-
-  </div>
-  <!-- Links -->
-  
-
+</div>
+<!-- Links -->

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { customerData } from '../data/customerData';
 import { Customer } from '../data/customer';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ApiCustomer } from '../data/ApiCustomer';
 
@@ -29,8 +29,13 @@ export class CustomerService {
   }
 
   addCustomer(customer: Customer) {
-    let c : ApiCustomer = new ApiCustomer(customer);
-    return this.httpClient.post(`${this.apiURL}`, ApiCustomer);
+    const headers = new HttpHeaders();
+    headers.set('Content-Type', 'application/json; charset=utf-8');
+    let c : ApiCustomer = new ApiCustomer(customer);    
+    
+    return this.httpClient.post(`${this.apiURL}`, c, {headers: headers}).subscribe(resp => {
+      console.log(resp);
+   });
   }
 
   updateCustomer(customer: Customer) {
